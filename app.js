@@ -5,11 +5,25 @@ data(){
     };
 },
 methods: {
-    minus(){
-        return this.number = this.number - 1;
+    minus(n){
+        n = parseInt(n);
+        if(isNaN(n)){
+            result = this.number--;
+            return result;
+        }else{
+            result = this.number - n;
+            return result;
+        }
     },
-    add(){
-        return this.number = this.number + 1;
+    add(n){
+        n = parseInt(n);
+        if(isNaN(n)){
+            result = this.number++;
+            return result;
+        }else{
+            result = this.number + n;
+            return result;
+        }
     }
 } 
 }).mount('#monApp');
